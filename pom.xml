@@ -22,8 +22,8 @@
 	<modules>
 		<module>eureka-server</module>
 		<module>api-gateway</module>
-		<!--<module>servicio-inventario</module>
-		<module>servicio-ordenes</module>-->
+		<module>servicio-inventario</module>
+		<!--<module>servicio-ordenes</module>-->
 		<module>servicio-productos</module>	
 	</modules>
 	<dependencies>	
