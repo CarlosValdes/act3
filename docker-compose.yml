@@ -1,34 +1,21 @@
 version: '3'
 services:
-  ### Postgres database for Inventory
-  #db-inventory:
-   # container_name: db-inventory
-    #image: postgres:15.2
-    #restart: unless-stopped
-    #environment:
-     # POSTGRES_DB: ms_inventory
-      #POSTGRES_USER: sa
-      #POSTGRES_PASSWORD: 123321
-    #ports:
-     # - 5431:5431
-    #expose:
-     # - 5431
-    #command: -p 5431
 
-  ### MySQL database for Orders
-  #db-orders:
-   # container_name: db-orders
-    #image: mysql:8.0.33
-    #restart: unless-stopped
-    #environment:
-     # MYSQL_DATABASE: ms_orders
-      #MYSQL_USER: sa
-      #MYSQL_PASSWORD: 123321
-      #MYSQL_ROOT_PASSWORD: 123321
-    #ports:
-     # - 3336:3336
-    #expose:
-     # - 3336
+
+  ### MySQL database for inventory
+  db-inventory:
+    container_name: db-inventory
+    image: mysql:8.0.33
+    restart: unless-stopped
+    environment:
+     MYSQL_DATABASE: ms_inventory
+     MYSQL_USER: sa
+     MYSQL_PASSWORD: 123321
+     MYSQL_ROOT_PASSWORD: 123321
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
 
   ### Postgres database for Products
   db-products:
